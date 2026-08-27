@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#ffe4ec" />
+<title>Tienda Lo de Patry | Perfumería, Cosmética, Juguetería y Regalos — Ing. Juan Allan, Florencio Varela</title>
+<meta name="description" content="Tienda Lo de Patry: el espacio multirrubro más completo de Ingeniero Juan Allan, Florencio Varela. Perfumería Natura, Avon, Monique Arnold y Arbell, cosmética, insumos de uñas y barbería, juguetería, cotillón y regalería. Calle 1286 N° 641." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://lodepatry.com.ar/" />
+
+<!-- Open Graph / Local SEO -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tienda Lo de Patry — Multirrubro en Ing. Juan Allan" />
+<meta property="og:description" content="Perfumería, cosmética, insumos de uñas y barbería, juguetería y regalería en Florencio Varela." />
+<meta property="og:image" content="./images/IMAGEN_2.jpg" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Tienda Lo de Patry",
+  "image": "./images/IMAGEN_2.jpg",
+  "logo": "./images/IMAGEN_1.png",
+  "description": "Espacio multirrubro: perfumería, cosmética, insumos de uñas y barbería, juguetería, cotillón y regalería.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle 1286 N° 641",
+    "addressLocality": "Ingeniero Juan Allan, Florencio Varela",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "openingHours": ["Mo-Fr 09:00-13:00", "Mo-Fr 16:00-20:30", "Sa 09:00-14:00"],
+  "priceRange": "$$"
+}
+</script>
+
+<style>
+  /* ============================================================
+     TOKENS DE DISEÑO — Soft UI 2026 (rosa suave, coral, oro)
+     ============================================================ */
+  :root {
+    --rosa-pastel: #ffe4ec;
+    --rosa: #f7a8c4;
+    --rosa-fuerte: #e5749b;
+    --coral: #ff8f76;
+    --oro: #d9ae5f;
+    --oro-claro: #f3dfae;
+    --tinta: #4a3540;
+    --tinta-suave: #7d6672;
+    --blanco: #fffdfd;
+    --verde-wa: #25d366;
+    --verde-wa-dark: #128c4a;
+
+    --radio-hero: 24px;
+    --radio-bento: 16px;
+
+    /* Sombra blanda multinivel (Soft UI) */
+    --sombra-soft:
+      0 1px 2px rgba(74, 53, 64, 0.04),
+      0 6px 14px rgba(229, 116, 155, 0.10),
+      0 18px 40px rgba(229, 116, 155, 0.12),
+      0 40px 80px rgba(229, 116, 155, 0.10);
+    --sombra-soft-hover:
+      0 2px 4px rgba(74, 53, 64, 0.05),
+      0 10px 22px rgba(229, 116, 155, 0.14),
+      0 28px 60px rgba(229, 116, 155, 0.16),
+      0 60px 110px rgba(229, 116, 155, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { background: var(--rosa-pastel); scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI", "Avenir Next", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: var(--tinta);
+    line-height: 1.55;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #fff6f8 0%, rgba(255, 246, 248, 0) 60%),
+      radial-gradient(900px 500px at 100% 0%, #ffeee7 0%, rgba(255, 238, 231, 0) 55%),
+      var(--rosa-pastel);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .contenedor { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+
+  a { color: inherit; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+
+  /* ============================ NAV ============================ */
+  .barra {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(229, 116, 155, 0.18);
+  }
+  .barra-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 66px; }
+  .barra-marca { display: flex; align-items: center; gap: 10px; font-family: Georgia, serif; font-size: 1.05rem; }
+  .barra-marca img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(229, 116, 155, 0.25); background: #fff; }
+  .barra-links { display: none; gap: 26px; font-size: 0.92rem; }
+  .barra-links a { text-decoration: none; color: var(--tinta-suave); transition: color 0.25s ease; }
+  .barra-links a:hover { color: var(--rosa-fuerte); }
+  @media (min-width: 860px) { .barra-links { display: flex; } }
+
+  /* ============================ HERO ============================ */
+  .hero { padding: 40px 0 10px; }
+  .hero-caja {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radio-hero);
+    padding: 56px 26px;
+    background:
+      linear-gradient(135deg, rgba(255, 228, 236, 0.92) 0%, rgba(247, 168, 196, 0.88) 45%, rgba(255, 143, 118, 0.92) 100%),
+      url("./images/IMAGEN_3.jpg") center / cover no-repeat;
+    box-shadow: var(--sombra-soft);
+  }
+  .hero-caja::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(600px 300px at 80% 110%, rgba(217, 174, 95, 0.35), transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Tarjeta Glassmorphic */
+  .vidrio {
+    position: relative; z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: var(--radio-hero);
+    box-shadow: var(--sombra-soft);
+  }
+
+  .hero-tarjeta { max-width: 720px; margin: 0 auto; padding: 34px 26px 30px; text-align: center; }
+  .hero-logo {
+    width: 132px; height: 132px; border-radius: 50%; object-fit: cover;
+    margin: -78px auto 18px; display: block;
+    background: var(--blanco);
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--sombra-soft);
+  }
+  .hero-kicker {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--rosa-fuerte); background: rgba(255, 255, 255, 0.75);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 14px;
+    border: 1px solid rgba(229, 116, 155, 0.25);
+  }
+  .hero-tarjeta h1 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; }
+  .hero-tarjeta h1 span { color: var(--rosa-fuerte); }
+  .hero-tarjeta p { color: var(--tinta-suave); font-size: 1.03rem; margin: 16px auto 0; max-width: 56ch; text-wrap: pretty; }
+  .hero-tarjeta strong { color: var(--tinta); }
+
+  .hero-marcas { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 22px; list-style: none; padding: 0; }
+  .hero-marcas li {
+    font-size: 0.8rem; padding: 7px 14px; border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85); color: var(--tinta-suave);
+    border: 1px solid rgba(217, 174, 95, 0.4);
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; justify-content: center;
+    padding: 15px 26px; border-radius: 999px; border: 0; cursor: pointer;
+    font-size: 0.98rem; font-weight: 600; text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-principal { background: linear-gradient(135deg, var(--rosa-fuerte), var(--coral)); color: #fff; box-shadow: var(--sombra-soft); }
+  .btn-principal:hover { box-shadow: var(--sombra-soft-hover); }
+  .btn-suave { background: rgba(255, 255, 255, 0.9); color: var(--tinta); box-shadow: var(--sombra-soft); }
+  .hero-acciones { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+
+  /* ====================== BENTO CATÁLOGO ====================== */
+  .seccion { padding: 66px 0 10px; }
+  .seccion-cabecera { text-align: center; max-width: 640px; margin: 0 auto 34px; }
+  .seccion-cabecera h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); }
+  .seccion-cabecera p { color: var(--tinta-suave); margin-top: 10px; }
+
+  .bento { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  @media (min-width: 720px) {
+    .bento { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 232px; }
+    .bento-item.destacado { grid-column: span 2; grid-row: span 2; }
+    .bento-item.alto { grid-row: span 2; }
+    .bento-item.ancho { grid-column: 1 / -1; }
+  }
+
+  .bento-item {
+    position: relative;
+    overflow: hidden;                 /* aísla el desbordamiento del zoom */
+    border-radius: var(--radio-bento);
+    min-height: 232px;
+    background: var(--blanco);
+    box-shadow: var(--sombra-soft);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    display: block; text-decoration: none; color: inherit;
+  }
+  .bento-item:hover { box-shadow: var(--sombra-soft-hover); }
+
+  .bento-item .foto {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.4s ease;   /* zoom fluido táctil */
+  }
+  .bento-item:hover .foto,
+  .bento-item:focus-visible .foto { transform: scale(1.05); }
+
+  .bento-item .velo {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(74, 53, 64, 0) 30%, rgba(74, 53, 64, 0.72) 100%);
+  }
+  .bento-texto { position: absolute; inset: auto 0 0 0; padding: 22px; color: #fff; }
+  .bento-texto h3 { font-size: 1.25rem; }
+  .bento-texto p { margin: 6px 0 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.92); text-wrap: pretty; }
+  .bento-texto strong { color: var(--oro-claro); }
+  .bento-texto em { color: #ffe9f0; font-style: italic; }
+  .bento-chip {
+    position: absolute; top: 16px; left: 16px;
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px; color: var(--tinta);
+    background: rgba(255, 255, 255, 0.78);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  }
+  .bento-precio {
+    position: absolute; top: 14px; right: 14px;
+    font-weight: 700; font-size: 0.9rem; color: #fff;
+    background: linear-gradient(135deg, var(--rosa-fuerte), var(--coral));
+    padding: 8px 14px; border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(229, 116, 155, 0.4);
+  }
+
+  .filtros { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
+  .filtro {
+    border: 1px solid rgba(229, 116, 155, 0.3); background: rgba(255, 255, 255, 0.8);
+    color: var(--tinta-suave); padding: 9px 18px; border-radius: 999px; cursor: pointer;
+    font-size: 0.85rem; transition: all 0.3s ease;
+  }
+  .filtro:hover { color: var(--rosa-fuerte); }
+  .filtro[aria-pressed="true"] { background: linear-gradient(135deg, var(--rosa-fuerte), var(--coral)); color: #fff; border-color: transparent; }
+
+  .estado { text-align: center; color: var(--tinta-suave); font-size: 0.9rem; padding: 10px 0 0; }
+
+  /* ====================== VISITANOS / LOCAL ====================== */
+  .local { display: grid; grid-template-columns: 1fr; gap: 22px; align-items: stretch; }
+  @media (min-width: 900px) { .local { grid-template-columns: 1.05fr 0.95fr; } }
+  .local-foto { position: relative; overflow: hidden; border-radius: var(--radio-hero); min-height: 340px; box-shadow: var(--sombra-soft); }
+  .local-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform 0.4s ease; }
+  .local-foto:hover img { transform: scale(1.05); }
+  .local-datos { padding: 32px 28px; }
+  .local-datos h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); }
+  .dato { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px dashed rgba(229, 116, 155, 0.3); }
+  .dato:last-of-type { border-bottom: 0; }
+  .dato-ico {
+    flex: 0 0 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--rosa-pastel), #ffe0d6); font-size: 1.1rem;
+  }
+  .dato-txt { font-size: 0.95rem; color: var(--tinta-suave); }
+  .dato-txt strong { display: block; color: var(--tinta); font-size: 1rem; }
+
+  /* ====================== WHATSAPP ====================== */
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55), 0 12px 30px rgba(18, 140, 74, 0.35); }
+    70%  { box-shadow: 0 0 0 22px rgba(37, 211, 102, 0), 0 12px 30px rgba(18, 140, 74, 0.35); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 12px 30px rgba(18, 140, 74, 0.35); }
+  }
+  .wa-seccion { padding: 70px 0 40px; text-align: center; }
+  .wa-caja { padding: 44px 24px; }
+  .wa-caja h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); }
+  .wa-caja p { color: var(--tinta-suave); max-width: 52ch; margin: 12px auto 26px; }
+  .btn-wa {
+    background: linear-gradient(135deg, var(--verde-wa), var(--verde-wa-dark));
+    color: #fff; animation: pulse 2.2s infinite;
+  }
+  .wa-flotante {
+    position: fixed; right: 18px; bottom: 18px; z-index: 50;
+    background: linear-gradient(135deg, var(--verde-wa), var(--verde-wa-dark));
+    color: #fff; border-radius: 999px; padding: 14px 20px;
+    animation: pulse 2.2s infinite; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;
+  }
+  .wa-flotante span.txt { display: none; }
+  @media (min-width: 620px) { .wa-flotante span.txt { display: inline; } }
+  @media (prefers-reduced-motion: reduce) { .btn-wa, .wa-flotante { animation: none; } }
+
+  /* ====================== ADMIN ====================== */
+  footer.pie { padding: 40px 0 120px; text-align: center; color: var(--tinta-suave); font-size: 0.85rem; }
+  .pie-admin {
+    background: none; border: 0; cursor: pointer; color: var(--tinta-suave);
+    font-size: 0.78rem; text-decoration: underline dotted; opacity: 0.7; margin-top: 10px;
+  }
+  .admin { display: none; padding: 0 0 120px; }
+  .admin.abierto { display: block; }
+  .admin-caja { padding: 30px 24px; }
+  .admin-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 22px; }
+  @media (min-width: 820px) { .admin-grid { grid-template-columns: 1fr 1.2fr; } }
+  .panel {
+    background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(229, 116, 155, 0.2);
+    border-radius: var(--radio-bento); padding: 22px; box-shadow: var(--sombra-soft);
+  }
+  .panel h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .panel .ayuda { font-size: 0.82rem; color: var(--tinta-suave); margin: 0 0 16px; }
+  .campo { display: block; margin-bottom: 14px; }
+  .campo > span { display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 6px; }
+  input[type="text"], input[type="number"], input[type="file"], select, textarea {
+    width: 100%; padding: 12px 14px; border-radius: 12px; font-size: 0.95rem; font-family: inherit;
+    border: 1px solid rgba(229, 116, 155, 0.28); background: var(--blanco); color: var(--tinta);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  textarea { min-height: 92px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--rosa); box-shadow: 0 0 0 4px rgba(247, 168, 196, 0.25); }
+  .check { display: flex; align-items: center; gap: 10px; font-size: 0.92rem; color: var(--tinta-suave); margin-bottom: 16px; }
+  .check input { width: 18px; height: 18px; accent-color: var(--rosa-fuerte); }
+  .aviso { margin-top: 14px; font-size: 0.85rem; padding: 10px 14px; border-radius: 12px; display: none; }
+  .aviso.ok { display: block; background: #e8f8ee; color: #16643c; }
+  .aviso.err { display: block; background: #fdecec; color: #97243a; }
+  .lista-mini { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .lista-mini li { font-size: 0.78rem; padding: 6px 12px; border-radius: 999px; background: var(--rosa-pastel); color: var(--tinta-suave); }
+</style>
+</head>
+
+<body>
+<!-- ============================ NAV ============================ -->
+<header class="barra">
+  <div class="contenedor barra-inner">
+    <a class="barra-marca" href="#hero" style="text-decoration:none">
+      <img src="./images/IMAGEN_1.png" alt="Logotipo de Tienda Lo de Patry" />
+      <span>Lo de Patry</span>
+    </a>
+    <nav class="barra-links" aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#visitanos">Visitanos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-principal" style="padding:11px 20px;font-size:0.86rem" href="#contacto">Consultar stock</a>
+  </div>
+</header>
+
+<main>
+  <!-- ============================ HERO ============================ -->
+  <section class="hero contenedor" id="hero">
+    <div class="hero-caja">
+      <div class="vidrio hero-tarjeta">
+        <img class="hero-logo" src="./images/IMAGEN_1.png" alt="Logotipo de Tienda Lo de Patry" />
+        <span class="hero-kicker">Ing. Juan Allan · Florencio Varela</span>
+        <h1>Tienda <span>Lo de Patry</span></h1>
+        <p>
+          El espacio <strong>multirrubro más completo del barrio</strong>: perfumería, cosmética,
+          insumos profesionales, juguetería y regalería. Somos ese negocio de cercanía donde te
+          conocen por tu nombre y siempre encontrás lo que buscás &mdash; con
+          <strong>regalos de cumpleaños</strong> y peluches para cada ocasión.
+        </p>
+        <ul class="hero-marcas">
+          <li>Natura</li><li>Avon</li><li>Monique Arnold</li><li>Arbell</li><li>Peluches &amp; Regalería</li>
+        </ul>
+        <div class="hero-acciones">
+          <a class="btn btn-principal" href="#catalogo">Ver el catálogo</a>
+          <a class="btn btn-suave" href="#visitanos">Cómo llegar al local</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== BENTO CATÁLOGO ====================== -->
+  <section class="seccion contenedor" id="catalogo">
+    <div class="seccion-cabecera">
+      <h2>Nuestro catálogo</h2>
+      <p>Cuatro grandes rubros, un solo mostrador. Pasá el cursor sobre cada bloque para ver el detalle.</p>
+    </div>
+    <div class="filtros" id="filtros" role="group" aria-label="Filtrar catálogo por categoría"></div>
+    <div class="bento" id="bento" aria-live="polite"></div>
+    <p class="estado" id="estado">Cargando catálogo…</p>
+  </section>
+
+  <!-- ====================== VISITANOS ====================== -->
+  <section class="seccion contenedor" id="visitanos">
+    <div class="seccion-cabecera">
+      <h2>Visitanos</h2>
+      <p>La fachada rosa con corazones ya es parte del paisaje del barrio.</p>
+    </div>
+    <div class="local">
+      <div class="local-foto">
+        <img src="./images/IMAGEN_2.jpg" alt="Fachada rosa con corazones pintados de Tienda Lo de Patry" />
+      </div>
+      <div class="vidrio local-datos">
+        <h2>Calle 1286 N° 641</h2>
+        <div class="dato">
+          <div class="dato-ico" aria-hidden="true">📍</div>
+          <p class="dato-txt"><strong>Dirección</strong> Calle 1286 N° 641, Ingeniero Juan Allan, Florencio Varela, Buenos Aires.</p>
+        </div>
+        <div class="dato">
+          <div class="dato-ico" aria-hidden="true">🕒</div>
+          <p class="dato-txt">
+            <strong>Horarios comerciales</strong>
+            <strong>Lunes a sábados:</strong> 8:30 a 20:00.<br />
+            <strong>Domingos y Feriados:</strong> 8:30 a 13:30.
+          </p>
+        </div>
+        <div class="dato">
+          <div class="dato-ico" aria-hidden="true">💳</div>
+          <p class="dato-txt"><strong>Medios de pago</strong> Efectivo, transferencia, débito y crédito. Consultá promos vigentes.</p>
+        </div>
+        <div class="hero-acciones" style="justify-content:flex-start;margin-top:22px">
+          <a class="btn btn-principal" target="_blank" rel="noopener"
+             href="https://maps.app.goo.gl/rHRVVdyEwX7qkFjd8">
+            Abrir en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CONTACTO WHATSAPP ====================== -->
+  <section class="wa-seccion contenedor" id="contacto">
+    <div class="vidrio wa-caja">
+      <h2>Hablemos por WhatsApp</h2>
+      <p>Precios, disponibilidad y reservas al instante. Te respondemos en el horario del local.</p>
+      <a class="btn btn-wa" id="waPrincipal" href="#" target="_blank" rel="noopener">
+        <span aria-hidden="true">💬</span> Consultar Catálogo Completo y Stock en Tiempo Real
+      </a>
+    </div>
+  </section>
+
+   <footer class="pie" style="padding: 40px 0 120px; text-align: center; color: var(--tinta-suave); font-size: 0.85rem;">
+    <!-- Contenedor Fluido de Redes y Canales Directos -->
+    <div class="canales-contacto" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 26px; font-size: 0.95rem; font-weight: 600;">
+        
+        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029Vb8VluzD38CZil3vm50M%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacvNOymQxXdo-evRBwN_jt34ZimLTZKxwFdVg9EOP8UtUBBExNAqhPswlRh2A_aem_8AD9t9TERCAVVghwWL2BAw&e=AUCzpHpeb8hb2Dk0p6OyPhgmqZ8Bx6Po3FtbZiKSfu912TgngocUjuhAEYyhm1Z6jbIWLcVDLe2RUtmsgSU8frWIq5rQwszWHm0o3z2zLauXzI6T9iiL9qZgQx0yln_tRoy_FKfIAeINbFNwmnUxMAg" 
+           target="_blank" rel="noopener" 
+           style="text-decoration: none; color: var(--tinta-suave); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px;" 
+           onmouseover="this.style.color='var(--verde-wa)'; this.style.transform='translateY(-2px)'" 
+           onmouseout="this.style.color='var(--tinta-suave)'; this.style.transform='translateY(0)'">
+            💬 WhatsApp
+        </a>
+
+        <a href="https://maps.app.goo.gl/veKSVCZKMFskfRrj8" 
+           target="_blank" rel="noopener" 
+           style="text-decoration: none; color: var(--tinta-suave); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px;" 
+           onmouseover="this.style.color='var(--coral)'; this.style.transform='translateY(-2px)'" 
+           onmouseout="this.style.color='var(--tinta-suave)'; this.style.transform='translateY(0)'">
+            📍 Ubicación
+        </a>
+
+        <a href="https://www.instagram.com/lodepatry.shpp?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" 
+           target="_blank" rel="noopener" 
+           style="text-decoration: none; color: var(--tinta-suave); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px;" 
+           onmouseover="this.style.color='var(--rosa-fuerte)'; this.style.transform='translateY(-2px)'" 
+           onmouseout="this.style.color='var(--tinta-suave)'; this.style.transform='translateY(0)'">
+            📸 Instagram
+        </a>
+
+        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40lodepatry.shop%3F_r%3D1%26_t%3DZS-97ccxYuMMMP%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacpNydg2bOWzSvenyWw7BEKrXRup7EryvsEZboCUEP5Wfqhp3SP3BzVXV3uiA_aem_4YwP62tF13c3LGcW32plug&e=AUCtpkO2c7it5Pdn30aYue5sU2_4VawTopQUnMQDfiEt4gdw17dSiZceE1RrOGHCk08mV7KPD72-zdss0bMe3FcQru-Cvu-p-9zO-iOVQwikkQiPv8gyfJF976B_hPi18uOgLVOa8iqwYxJjn3ksTlo" 
+           target="_blank" rel="noopener" 
+           style="text-decoration: none; color: var(--tinta-suave); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px;" 
+           onmouseover="this.style.color='var(--tinta)'; this.style.transform='translateY(-2px)'" 
+           onmouseout="this.style.color='var(--tinta-suave)'; this.style.transform='translateY(0)'">
+            🎵 TikTok
+        </a>
+    </div>
+
+    <!-- Información de Copyright y Acceso Técnico -->
+    <p style="margin: 0;">© <span id="anio"></span> Tienda Lo de Patry · Ingeniero Juan Allan, Florencio Varela</p>
+    <button class="pie-admin" id="btnAdmin" type="button" style="background: none; border: 0; cursor: pointer; color: var(--tinta-suave); font-size: 0.78rem; text-decoration: underline dotted; opacity: 0.7; margin-top: 12px;">Acceso interno</button>
+</footer>
+
+
+
+  <!-- ====================== PANEL DE ADMINISTRACIÓN ====================== -->
+  <section class="admin contenedor" id="admin" aria-label="Panel de administración">
+    <div class="vidrio admin-caja">
+      <div class="seccion-cabecera" style="margin-bottom:6px">
+        <h2>Panel de administración</h2>
+        <p>Cargá categorías y productos directamente en Supabase. Las imágenes se suben al Storage y se guarda la URL pública.</p>
+      </div>
+
+      <div class="admin-grid">
+        <!-- Agregar categoría -->
+        <form class="panel" id="formCategoria" novalidate>
+          <h3>Agregar categoría</h3>
+          <p class="ayuda">Tabla <code>categorias</code></p>
+          <label class="campo">
+            <span>Nombre</span>
+            <input type="text" name="nombre" required placeholder="Ej: Cosmética" />
+          </label>
+          <button class="btn btn-principal" type="submit" style="width:100%">Guardar categoría</button>
+          <p class="aviso" id="avisoCategoria" role="status"></p>
+          <ul class="lista-mini" id="listaCategorias"></ul>
+        </form>
+
+        <!-- Agregar producto -->
+        <form class="panel" id="formProducto" novalidate>
+          <h3>Agregar producto</h3>
+          <p class="ayuda">Tabla <code>productos</code> + bucket <code>productos</code> del Storage</p>
+          <label class="campo">
+            <span>Nombre</span>
+            <input type="text" name="nombre" required placeholder="Ej: Máscara de pestañas Natura" />
+          </label>
+          <label class="campo">
+            <span>Descripción</span>
+            <textarea name="descripcion" placeholder="Detalle corto que se ve en la tarjeta"></textarea>
+          </label>
+          <label class="campo">
+            <span>Precio</span>
+            <input type="number" name="precio" step="0.01" min="0" placeholder="0.00" />
+          </label>
+          <label class="campo">
+            <span>Categoría</span>
+            <select name="categoria_id" id="selectCategoria" required>
+              <option value="">Seleccionar…</option>
+            </select>
+          </label>
+          <label class="campo">
+            <span>Imagen</span>
+            <input type="file" name="imagen" accept="image/*" />
+          </label>
+          <label class="check">
+            <input type="checkbox" name="destacado" />
+            Destacado (ocupa el cuadrante grande del Bento Grid)
+          </label>
+          <button class="btn btn-principal" type="submit" style="width:100%">Guardar producto</button>
+          <p class="aviso" id="avisoProducto" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="wa-flotante" id="waFlotante" href="#" target="_blank" rel="noopener">
+  <span aria-hidden="true">💬</span>
+  <span class="txt">Consultar stock en tiempo real</span>
+  <span class="sr-only">Abrir chat de WhatsApp con Tienda Lo de Patry</span>
+</a>
+
+<script type="module">
+  /* ============================================================
+     1) CONFIGURACIÓN — REEMPLAZÁ ESTAS LLAVES EN TU VS CODE
+     ============================================================ */
+  const SUPABASE_URL = 'https://qvtnqtfeqkecstboempe.supabase.co'; // <-- tu Project URL
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF2dG5xdGZlcWtlY3N0Ym9lbXBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NDc0NTQsImV4cCI6MjEwMzMyMzQ1NH0.0cc0mi-997OMbqDa-5BC6rjd1gBrKeeuzn1lWAHyriw';                  // <-- tu anon public key
+
+  const WHATSAPP_NUMERO = '5491133334570';      // <-- tu número con código de país, sin + ni espacios
+  const STORAGE_BUCKET  = 'productos';          // <-- bucket público del Storage de Supabase
+  const CLAVE_ADMIN     = 'admin123';           // <-- clave simple del panel oculto
+
+  /* Cliente oficial de Supabase por CDN (jsDelivr) */
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+  const configurado = !SUPABASE_URL.includes('YOUR_PROJECT_ID') && !SUPABASE_ANON_KEY.includes('YOUR_ANON_KEY');
+  const supabase = configurado ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+  /* ============================================================
+     2) DATOS POR DEFECTO (fallback si la base está vacía)
+     ============================================================ */
+  const CATALOGO_DEFAULT = [
+    {
+      id: 'd1',
+      nombre: 'Cosmética Natura & Avon',
+      descripcion: 'Máscaras de pestañas, labiales y bases con <strong>disponibilidad inmediata</strong> de las líneas más pedidas de Natura y Avon.',
+      imagen_url: './images/IMAGEN_4.jpg',
+      destacado: true,
+      categorias: { nombre: 'Cosmética' }
+    },
+    {
+      id: 'd2',
+      nombre: 'Uñas & Pestañas',
+      descripcion: 'Esmaltes, limas y kits de pestañas para el <em>abastecimiento técnico de las manicuras de la zona</em>.',
+      imagen_url: './images/IMAGEN_5.jpg',
+      destacado: false,
+      categorias: { nombre: 'Uñas y Pestañas' }
+    },
+    {
+      id: 'd3',
+      nombre: 'Barbería & Capilares',
+      descripcion: 'Patilleras, máquinas y productos capilares pensados para <strong>los barberos del barrio</strong>.',
+      imagen_url: './images/IMAGEN_6.jpg',
+      destacado: false,
+      categorias: { nombre: 'Barbería' }
+    },
+    {
+      id: 'd4',
+      nombre: 'Juguetería, Cotillón & Regalería',
+      descripcion: 'Peluches, sorpresitas y todo el <strong>cotillón estacional</strong> para cumpleaños y fechas especiales del barrio.',
+      imagen_url: './images/IMAGEN_7.jpg',
+      destacado: false,
+      ancho: true,
+      categorias: { nombre: 'Juguetería y Regalos' }
+    }
+  ];
+
+  /* ============================================================
+     3) UTILIDADES
+     ============================================================ */
+  const $ = (sel) => document.querySelector(sel);
+  const bento = $('#bento');
+  const estado = $('#estado');
+  const filtros = $('#filtros');
+
+  const escapar = (t = '') => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const permitirEtiquetas = (t = '') =>
+    escapar(t)
+      .replace(/&lt;(\/?)(strong|em|b|i)&gt;/g, '<$1$2>');
+
+  const precioARS = (v) =>
+    v === null || v === undefined || v === '' ? '' :
+    new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 }).format(Number(v));
+
+  const waLink = (texto) =>
+    'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(texto);
+
+  let PRODUCTOS = [];
+  let CATEGORIAS = [];
+  let filtroActivo = 'todas';
+
+  /* ============================================================
+     4) RENDER DEL BENTO GRID
+     ============================================================ */
+  function claseBento(p, i) {
+    if (p.ancho) return 'bento-item ancho';
+    if (p.destacado && i === 0) return 'bento-item destacado';
+    return 'bento-item';
+  }
+
+  function renderBento() {
+    const lista = filtroActivo === 'todas'
+      ? PRODUCTOS
+      : PRODUCTOS.filter((p) => (p.categorias?.nombre || p.categoria || '') === filtroActivo);
+
+    if (!lista.length) {
+      bento.innerHTML = '';
+      estado.textContent = 'No hay productos en esta categoría todavía.';
+      return;
+    }
+
+    estado.textContent = '';
+    bento.innerHTML = lista.map((p, i) => {
+      const cat = p.categorias?.nombre || p.categoria || 'Catálogo';
+      const img = p.imagen_url || './images/IMAGEN_3.jpg';
+      const precio = precioARS(p.precio);
+      return (
+        '<a class="' + claseBento(p, i) + '" href="' + waLink('Hola! Quiero consultar por: ' + p.nombre) + '" target="_blank" rel="noopener">' +
+          '<img class="foto" src="' + escapar(img) + '" alt="' + escapar(p.nombre) + '" loading="lazy" />' +
+          '<div class="velo"></div>' +
+          '<span class="bento-chip">' + escapar(cat) + '</span>' +
+          (precio ? '<span class="bento-precio">' + precio + '</span>' : '') +
+          '<div class="bento-texto">' +
+            '<h3>' + escapar(p.nombre) + '</h3>' +
+            '<p>' + permitirEtiquetas(p.descripcion || '') + '</p>' +
+          '</div>' +
+        '</a>'
+      );
+    }).join('');
+  }
+
+  function renderFiltros() {
+    const nombres = [...new Set(PRODUCTOS.map((p) => p.categorias?.nombre || p.categoria).filter(Boolean))];
+    filtros.innerHTML = ['todas', ...nombres].map((n) =>
+      '<button class="filtro" type="button" aria-pressed="' + (n === filtroActivo) + '" data-cat="' + escapar(n) + '">' +
+        (n === 'todas' ? 'Todo el catálogo' : escapar(n)) +
+      '</button>'
+    ).join('');
+  }
+
+  filtros.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filtro');
+    if (!btn) return;
+    filtroActivo = btn.dataset.cat;
+    renderFiltros();
+    renderBento();
+  });
+
+  /* ============================================================
+     5) CARGA ASÍNCRONA DESDE SUPABASE
+     ============================================================ */
+  async function cargarCategorias() {
+    if (!supabase) return [];
+    const { data, error } = await supabase.from('categorias').select('id, nombre').order('nombre');
+    if (error) { console.warn('[categorias]', error.message); return []; }
+    return data || [];
+  }
+
+  async function cargarProductos() {
+    if (!supabase) return [];
+    const { data, error } = await supabase
+      .from('productos')
+      .select('id, nombre, descripcion, precio, destacado, imagen_url, categoria_id, categorias(nombre)')
+      .order('destacado', { ascending: false })
+      .order('nombre');
+    if (error) { console.warn('[productos]', error.message); return []; }
+    return data || [];
+  }
+
+  function pintarSelectCategorias() {
+    const sel = $('#selectCategoria');
+    sel.innerHTML = '<option value="">Seleccionar…</option>' +
+      CATEGORIAS.map((c) => '<option value="' + escapar(c.id) + '">' + escapar(c.nombre) + '</option>').join('');
+    $('#listaCategorias').innerHTML = CATEGORIAS.map((c) => '<li>' + escapar(c.nombre) + '</li>').join('');
+  }
+
+  async function inicializar() {
+    $('#anio').textContent = new Date().getFullYear();
+    const msgWa = 'Hola Lo de Patry! Quiero consultar el catálogo completo y el stock en tiempo real.';
+    $('#waPrincipal').href = waLink(msgWa);
+    $('#waFlotante').href = waLink(msgWa);
+
+    if (!supabase) {
+      estado.textContent = 'Modo demo: reemplazá SUPABASE_URL y SUPABASE_ANON_KEY para leer tu base real.';
+      PRODUCTOS = CATALOGO_DEFAULT;
+      renderFiltros(); renderBento();
+      return;
+    }
+
+    const [cats, prods] = await Promise.all([cargarCategorias(), cargarProductos()]);
+    CATEGORIAS = cats;
+    pintarSelectCategorias();
+
+    // Si la base está vacía, renderizamos las 4 tarjetas principales por defecto
+    PRODUCTOS = prods.length ? prods : CATALOGO_DEFAULT;
+    if (!prods.length) estado.textContent = 'Mostrando catálogo destacado por defecto (la base aún no tiene productos).';
+    renderFiltros();
+    renderBento();
+  }
+
+  /* ============================================================
+     6) PANEL DE ADMINISTRACIÓN OCULTO
+     ============================================================ */
+  const panelAdmin = $('#admin');
+  $('#btnAdmin').addEventListener('click', () => {
+    if (panelAdmin.classList.contains('abierto')) {
+      panelAdmin.classList.remove('abierto');
+      return;
+    }
+    const clave = window.prompt('Clave de administración:');
+    if (clave === null) return;
+    if (clave !== CLAVE_ADMIN) { window.alert('Clave incorrecta.'); return; }
+    panelAdmin.classList.add('abierto');
+    panelAdmin.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  function avisar(el, tipo, texto) {
+    el.className = 'aviso ' + tipo;
+    el.textContent = texto;
+  }
+
+  $('#formCategoria').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const aviso = $('#avisoCategoria');
+    const nombre = e.target.nombre.value.trim();
+    if (!nombre) return avisar(aviso, 'err', 'Ingresá un nombre.');
+    if (!supabase) return avisar(aviso, 'err', 'Configurá primero las llaves de Supabase.');
+
+    const { error } = await supabase.from('categorias').insert({ nombre });
+    if (error) return avisar(aviso, 'err', 'Error: ' + error.message);
+
+    avisar(aviso, 'ok', 'Categoría "' + nombre + '" guardada.');
+    e.target.reset();
+    CATEGORIAS = await cargarCategorias();
+    pintarSelectCategorias();
+  });
+
+  $('#formProducto').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const aviso = $('#avisoProducto');
+    const f = e.target;
+    if (!supabase) return avisar(aviso, 'err', 'Configurá primero las llaves de Supabase.');
+    if (!f.nombre.value.trim()) return avisar(aviso, 'err', 'El nombre es obligatorio.');
+
+    avisar(aviso, 'ok', 'Guardando…');
+
+    let imagen_url = null;
+    const archivo = f.imagen.files[0];
+
+    // Subida al Storage de Supabase y guardado de la URL pública
+    if (archivo) {
+      const ext = (archivo.name.split('.').pop() || 'jpg').toLowerCase();
+      const ruta = Date.now() + '-' + Math.random().toString(36).slice(2, 8) + '.' + ext;
+      const { error: errUp } = await supabase.storage.from(STORAGE_BUCKET).upload(ruta, archivo, { cacheControl: '3600', upsert: false });
+      if (errUp) return avisar(aviso, 'err', 'Error al subir la imagen: ' + errUp.message);
+      imagen_url = supabase.storage.from(STORAGE_BUCKET).getPublicUrl(ruta).data.publicUrl;
+    }
+
+    const registro = {
+      nombre: f.nombre.value.trim(),
+      descripcion: f.descripcion.value.trim() || null,
+      precio: f.precio.value ? Number(f.precio.value) : null,
+      destacado: f.destacado.checked,
+      categoria_id: f.categoria_id.value || null,
+      imagen_url
+    };
+
+    const { error } = await supabase.from('productos').insert(registro);
+    if (error) return avisar(aviso, 'err', 'Error: ' + error.message);
+
+    avisar(aviso, 'ok', 'Producto "' + registro.nombre + '" publicado en el catálogo.');
+    f.reset();
+    PRODUCTOS = await cargarProductos();
+    if (!PRODUCTOS.length) PRODUCTOS = CATALOGO_DEFAULT;
+    renderFiltros();
+    renderBento();
+  });
+
+  /* ============================================================
+     7) ARRANQUE
+     ============================================================ */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inicializar, { once: true });
+  } else {
+    inicializar();
+  }
+</script>
+</body>
+</html>
