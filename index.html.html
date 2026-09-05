@@ -18,22 +18,95 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Tienda Lo de Patry",
-  "image": "./images/IMAGEN_2.jpg",
-  "logo": "./images/IMAGEN_1.png",
-  "description": "Espacio multirrubro: perfumería, cosmética, insumos de uñas y barbería, juguetería, cotillón y regalería.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 1286 N° 641",
-    "addressLocality": "Ingeniero Juan Allan, Florencio Varela",
-    "addressRegion": "Buenos Aires",
-    "addressCountry": "AR"
-  },
-  "openingHours": ["Mo-Fr 09:00-13:00", "Mo-Fr 16:00-20:30", "Sa 09:00-14:00"],
-  "priceRange": "$$"
+  "@graph": [
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://lodepatry.com.ar",
+      "name": "Tienda Lo de Patry",
+      "url": "https://lodepatry.com.ar",
+      "image": "https://lodepatry.com.arimages/IMAGEN_2.jpg",
+      "logo": "https://lodepatry.com.arimages/IMAGEN_1.png",
+      "description": "El espacio multirrubro y centro de estética más completo de Ingeniero Juan Allan, Florencio Varela. Especialistas en perfumería multimarca, cosmética por catálogo, insumos profesionales para manicuras y barberías, juguetería, cotillón y regalería.",
+      "telephone": "+5491133334570",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 1286 N° 641",
+        "addressLocality": "Ingeniero Juan Allan, Florencio Varela",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.8325", 
+        "longitude": "-58.2694"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "PublicHolidays"],
+          "opens": "08:30",
+          "closes": "13:30"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com",
+        "https://tiktok.com"
+      ],
+      "knowsAbout": [
+        "Cosmética por catálogo Natura",
+        "Cosmética por catálogo Avon",
+        "Cosmética Monique Arnold",
+        "Cosmética Arbell",
+        "Servicios de Estética Profesional",
+        "Extensión de pestañas",
+        "Diseño de uñas y Nail Art",
+        "Insumos para barberías del barrio",
+        "Regalería y Peluches de cumpleaños"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lodepatry.com.ar#website",
+      "url": "https://lodepatry.com.ar",
+      "name": "Tienda Lo de Patry",
+      "description": "Catálogo online en tiempo real y servicios de estética en Ingeniero Allan."
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://lodepatry.com.ar#catalogo",
+      "url": "https://lodepatry.com.ar#catalogo",
+      "name": "Catálogo Multirrubro - Tienda Lo de Patry",
+      "description": "Base de datos en tiempo real sincronizada con Supabase. Incluye líneas completas de Cosmética, Barbería, Regalería y Uñas.",
+      "about": [
+        {
+          "@type": "Brand",
+          "name": "Natura"
+        },
+        {
+          "@type": "Brand",
+          "name": "Avon"
+        },
+        {
+          "@type": "Brand",
+          "name": "Monique Arnold"
+        },
+        {
+          "@type": "Brand",
+          "name": "Arbell"
+        }
+      ]
+    }
+  ]
 }
 </script>
+
 
 <style>
   /* ============================================================
