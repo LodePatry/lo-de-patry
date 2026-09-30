@@ -18,22 +18,305 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Tienda Lo de Patry",
-  "image": "./images/IMAGEN_2.jpg",
-  "logo": "./images/IMAGEN_1.png",
-  "description": "Espacio multirrubro: perfumería, cosmética, insumos de uñas y barbería, juguetería, cotillón y regalería.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 1286 N° 641",
-    "addressLocality": "Ingeniero Juan Allan, Florencio Varela",
-    "addressRegion": "Buenos Aires",
-    "addressCountry": "AR"
-  },
-  "openingHours": ["Mo-Fr 09:00-13:00", "Mo-Fr 16:00-20:30", "Sa 09:00-14:00"],
-  "priceRange": "$$"
+  "@graph": [
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://lodepatry.com.ar",
+      "name": "Tienda Lo de Patry",
+      "url": "https://lodepatry.com.ar",
+      "image": "https://lodepatry.com.ar/images/IMAGEN_2.jpg",
+      "logo": "https://lodepatry.com.ar/images/IMAGEN_1.png",
+      "description": "El espacio multirrubro más completo de Ingeniero Juan Allan, Florencio Varela. Ofrecemos perfumería, cosmética de alta calidad, insumos para uñas y barbería, regalería y peluches. Si un cliente busca un producto específico y no está en stock, lo conseguimos de inmediato bajo pedido personalizado.",
+      "telephone": "+5491133334570",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 1286 N° 641",
+        "addressLocality": "Ingeniero Juan Allan, Florencio Varela",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.8325", 
+        "longitude": "-58.2694"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "PublicHolidays"],
+          "opens": "08:30",
+          "closes": "13:30"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com",
+        "https://tiktok.com"
+      ],
+      "knowsAbout": [
+        "Calidad garantizada en cosmética y maquillaje",
+        "Pedidos personalizados de productos a solicitud del cliente",
+        "Líneas oficiales Natura, Avon, Monique Arnold y Arbell",
+        "Envíos y consultas en tiempo real por WhatsApp"
+      ],
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Catálogo Interactivo Automático",
+        "description": "Funcionamiento de la interfaz: El usuario presiona cualquier botón de categoría en la barra de filtros de la web y de manera automática y en tiempo real el catálogo renderiza exclusivamente los productos correspondientes a dicha selección.",
+        "hasMenuItem": [
+          {
+            "@type": "MenuSection",
+            "name": "Cosmética, Maquillaje y Cuidado Facial",
+            "itemListElement": [
+              { "@type": "MenuItem", "name": "Limpiador Facial Hidratante Kaliya Beauty B5 & Ácido Hialurónico" },
+              { "@type": "MenuItem", "name": "Iluminador Compacto Gerbowie Cherry Blossom" },
+              { "@type": "MenuItem", "name": "Primer Facial Esencia de Arroz Huxia Beauty" },
+              { "@type": "MenuItem", "name": "Labial en Barra Eloíse Soft" },
+              { "@type": "MenuItem", "name": "Paleta de Glitters Prensados MC My Colors Cosmetics My Sweetheart" },
+              { "@type": "MenuItem", "name": "Base Líquida y Sombra 2 en 1 Sparkling Girls Pore Less Perfection" },
+              { "@type": "MenuItem", "name": "Polvo Volátil Matificante Maybelucky Fix & Run Stitch" },
+              { "@type": "MenuItem", "name": "Labial Líquido Mate Siheglan Shine Lipgloss" },
+              { "@type": "MenuItem", "name": "Gel de Glitter Facial y Corporal Kaliya Beauty Kuromi" },
+              { "@type": "MenuItem", "name": "Polvo Compacto Matificante Miss Fon Hello Kitty" },
+              { "@type": "MenuItem", "name": "Tinta de Labios s.f.r color Hot Water Tint" },
+              { "@type": "MenuItem", "name": "Tinta Labial Líquida Hedy Beauty Animados" },
+              { "@type": "MenuItem", "name": "Paleta de Glitters MC Cosmetics Heavy Metal" },
+              { "@type": "MenuItem", "name": "Paleta de Glitters T&G Glitter Galore Luxe Collection" },
+              { "@type": "MenuItem", "name": "Delineador y Brillo Labial 2 en 1 Kiss Beauty Lip Duo" },
+              { "@type": "MenuItem", "name": "Brillo Labial Kaliya Beauty Rainbow Lip Gloss Kuromi & Stitch" },
+              { "@type": "MenuItem", "name": "Primer Facial Huxia Beauty Fit Skin Cooling Matte" },
+              { "@type": "MenuItem", "name": "Gel de Glitter Sparkling Girls Heavy Metal (30ml)" },
+              { "@type": "MenuItem", "name": "Aceite Labial Tejar LoveCrazy Lip Oil 6ml" },
+              { "@type": "MenuItem", "name": "Brillo Labial Karité Shine Lipgloss" },
+              { "@type": "MenuItem", "name": "Rubor e Iluminador en Barra Mocallure Jelly Blush QQ Soft" },
+              { "@type": "MenuItem", "name": "Iluminador Líquido Maybelucky Highlight Lucky Light" },
+              { "@type": "MenuItem", "name": "Sombra de Ojos Cuarteto s.f.r color Eyeshadow" },
+              { "@type": "MenuItem", "name": "Gel de Glitter Kaliya Beauty Magic Glitter Unicorn" },
+              { "@type": "MenuItem", "name": "Labial Mate y Delineador 2 en 1 Beauty Model Vinyl Matte Color" },
+              { "@type": "MenuItem", "name": "Delineador y Brillo Labial Mate Meike Glamour Super Stay Matte Ink" },
+              { "@type": "MenuItem", "name": "Corrector e Iluminador Líquido Iman Of Noble PRO.conceal HD" },
+              { "@type": "MenuItem", "name": "Lápiz Delineador de Labios Karité Charm Lip Pencil Waterproof" },
+              { "@type": "MenuItem", "name": "Labial Líquido Mate T&G Tango Matte Liquid Lipstick" },
+              { "@type": "MenuItem", "name": "Iluminador Líquido Karité 3D Liquid Highlighter" },
+              { "@type": "MenuItem", "name": "Kit de Delineador y Brillo Labial Kiss Beauty Lip Duo (Waterproof)" },
+              { "@type": "MenuItem", "name": "Lápiz Labial Tejar Lipstick" },
+              { "@type": "MenuItem", "name": "Espuma de Limpieza Facial Mousse Micelar Miss Vanessa Aloe Vera (150ml)" },
+              { "@type": "MenuItem", "name": "Brillo Labial con Llavero Micolor Lucky Lip Gloss" },
+              { "@type": "MenuItem", "name": "Paleta de Sombras de Ojos Sevencool Cuttie Girl" },
+              { "@type": "MenuItem", "name": "Lápiz Labial Mate Karité Lipstick Lasting Matte" },
+              { "@type": "MenuItem", "name": "Espuma de Limpieza Facial Mousse Micelar Miss Vanessa Rosa Mosqueta (150ml)" },
+              { "@type": "MenuItem", "name": "Delineador Líquido en Fibra Meike Glamour Sky High Black Eyes Eyeliner Pen" },
+              { "@type": "MenuItem", "name": "Nombre Iluminador Compacto Sevencool Makeup" },
+              { "@type": "MenuItem", "name": "Voluminizador de Labios Karité Max Lip Maximizer Plumper" },
+              { "@type": "MenuItem", "name": "Lápiz Labial Tejar Love Lipstick 24H" },
+              { "@type": "MenuItem", "name": "Lápiz Labial Mate Iman Of Noble Matte Show" },
+              { "@type": "MenuItem", "name": "Labial Líquido Mate Huda Matte Me Lip Gloss" },
+              { "@type": "MenuItem", "name": "Lápiz Labial Mate Note Perfect Matte Lipstick 24HRS" },
+              { "@type": "MenuItem", "name": "Delineador Doble para Cejas y Ojos My Colors Cosmetics Eye & Brow" },
+              { "@type": "MenuItem", "name": "Delineador Líquido de Colores La Bonita Chica Nnueowe Eye Switch" },
+              { "@type": "MenuItem", "name": "Base de Maquillaje Líquida Tejar Love Crazy Liquid Foundation (40ml)" },
+              { "@type": "MenuItem", "name": "Delineador Líquido para Ojos Miss Betty Vivid Touch Eye Liner" },
+              { "@type": "MenuItem", "name": "Tinta de Labios Karité Lip Tint Long-Lasting Moist" },
+              { "@type": "MenuItem", "name": "Gloss Labial Miss Betty Wine Lip Gloss" },
+              { "@type": "MenuItem", "name": "Espuma de Limpieza Facial Miss Vanessa Mousse Micelar 5 en 1 (150ml)" },
+              { "@type": "MenuItem", "name": "Base de Maquillaje y Protector Solar T&G Tango Matte Sunscreen Foundation SPF 30 PA+++" },
+              { "@type": "MenuItem", "name": "Labial en Barra Mate Diamond Beauty Matte Lipstick" },
+              { "@type": "MenuItem", "name": "Corrector de Ojeras Sparkling Girls Instant Age Rewind Eraser Multi-Use Concealer" },
+              { "@type": "MenuItem", "name": "Labial en Barra Mate Velvet Diamond Beauty Colour Matte Lipstick" },
+              { "@type": "MenuItem", "name": "Corrector en Barra Romantic Queen Concealer Stick" },
+              { "@type": "MenuItem", "name": "Kit de Maquillaje de Regalo en Bolsita Decorativa (Con corrector, labial y esponjita)" },
+              { "@type": "MenuItem", "name": "Labial en Barra Mate Larga Duración Velvet Diamond Beauty Colour Matte Lipstick" },
+              { "@type": "MenuItem", "name": "Sérum Facial Iluminador Meike Glamour Vitamin Illuminating (30 ml)" },
+              { "@type": "MenuItem", "name": "Sérum Facial Rejuvenecedor Sadoer Jasmine Petal & Hyaluronic Acid (30 ml)" },
+              { "@type": "MenuItem", "name": "Sérum Facial Humectante Sadoer Lavender Petal & Hyaluronic Acid (30 ml)" },
+              { "@type": "MenuItem", "name": "Sérum Facial Antioxidante Bioaqua Vitamin C Serum (30 ml)" },
+              { "@type": "MenuItem", "name": "Sérum Facial de Hidratación Intensiva Bioaqua Hyaluronic Acid Serum (30 ml)" },
+              { "@type": "MenuItem", "name": "Barra Nutritiva Anti-Grietas para Manos y Pies Sadoer Strawberry + Vitamin C (40 g)" },
+              { "@type": "MenuItem", "name": "Esencia Facial Anti-Arrugas Bioaqua Sea Fennel Hyaluronic Acid (30 ml)" },
+              { "@type": "MenuItem", "name": "Mascarilla Parches para Ojeras de Colágeno y Oro Dear She" },
+              { "@type": "MenuItem", "name": "Mascarilla Parches para Ojeras de Extracto de Arroz y Colágeno Dear She" },
+              { "@type": "MenuItem", "name": "Mascarilla Facial Iluminadora de Cereza Kakaziyan" },
+              { "@type": "MenuItem", "name": "Mascarilla Parche para Labios de Colágeno Dear She" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Relajante de Lavanda Bioaqua" },
+{ "@type": "MenuItem", "name": "Mascarilla Parches para Ojeras de Vitamina C y Colágeno Dear She" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Iluminadora de Naranja y Vitamina C Bioaqua" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Hidratante de Kiwi y Ácido Hialurónico Sadoer" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Antiaging e Hidratante Kakaziyan (30ml)" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Antioxidante de Uva y Nicotinamida Sadoer" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Antioxidante de Manzana Roja y Nicotinamida Sadoer" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Hidratante de Arándano y Ácido Hialurónico Sadoer" },
+{ "@type": "MenuItem", "name": "Mascarilla Facial Nutritiva Chocolate Fudge Kakaziyan (30g)" }
+]
+},
+{
+"@type": "MenuSection",
+"name": "Perfumería y Líneas Especiales Natura",
+"itemListElement": [
+{ "@type": "MenuItem", "name": "Perfume Corporal en Spray con Llavero Flower Rococo Sweet Fragrance Spray" },
+{ "@type": "MenuItem", "name": "Body Splash Perfumado Natura Tododia (200 ml)" },
+{ "@type": "MenuItem", "name": "Eau de Toilette Frescor Natura Ekos (150 ml)" },
+{ "@type": "MenuItem", "name": "Crema Corporal Nutritiva Natura Tododia (400 ml)" },
+{ "@type": "MenuItem", "name": "Set de Regalo Masculino Natura Kaiak Urbe (Desodorante Roll-On + Billetera / Tarjetero)" },
+{ "@type": "MenuItem", "name": "Caja de Jabones en Barra Puro Vegetal Natura Tododia Edición Corazones Amor" },
+{ "@type": "MenuItem", "name": "Eau de Toilette Frescor Natura Ekos Estoraque (150 ml)" },
+{ "@type": "MenuItem", "name": "Perfume Femenino Natura Ilía Secreto Eau de Parfum (50 ml)" },
+{ "@type": "MenuItem", "name": "Perfume Masculino Natura Homem Nós Eau de Parfum (100 ml)" },
+{ "@type": "MenuItem", "name": "Perfume Unisex Natura Humor Liberta Eau de Toilette (75 ml)" },
+{ "@type": "MenuItem", "name": "Eau de Toilette Frescor Natura Ekos Surtidos (Castaña, Andiroba, Pitanga Preta - 150 ml)" },
+{ "@type": "MenuItem", "name": "Set de Regalo Colección Minis Natura Kaiak Femenino (3 x Eau de Toilette)" }
+]
+},
+{
+"@type": "MenuSection",
+"name": "Insumos Profesionales, Uñas, Pestañas e Insumos Eléctricos",
+"itemListElement": [
+{ "@type": "MenuItem", "name": "Kit de Extensión de Pestañas en Ramos Kisseleven" },
+{ "@type": "MenuItem", "name": "Máscara de Pestañas Miss Betty Sky High Ultra Smooth" },
+{ "@type": "MenuItem", "name": "Prebase para Máscara de Pestañas Miss Betty The Colossal Big Shot Primer" },
+{ "@type": "MenuItem", "name": "Set de Brochas y Borlas Danma Makeup Tools (5 Piezas)" },
+{ "@type": "MenuItem", "name": "Set de Brochas y Borlas Danma Makeup Tools Tono Marrón (5 Piezas)" },
+{ "@type": "MenuItem", "name": "Máscara de Pestañas Miss Betty Pumped Up! Mascara" },
+{ "@type": "MenuItem", "name": "Máscara de Pestañas Meike Glamour Sky High 3D Black" },
+{ "@type": "MenuItem", "name": "Peine Separador de Pestañas curvo con Tapa Protectora" },
+{ "@type": "MenuItem", "name": "Pie de Rey / Calibre Plástico para Medición de Cejas y Micropigmentación" },
+{ "@type": "MenuItem", "name": "Arqueador / Arqueador de Pestañas Aoyasiyue con Mango Ergonómico" },
+{ "@type": "MenuItem", "name": "Kit de Extensión de Pestañas Punto por Punto Kiss Eleven (Incluye Aplicador)" },
+{ "@type": "MenuItem", "name": "Leave-In Matizador y Restaurador Natura Lumina (150 ml)" },
+{ "@type": "MenuItem", "name": "Esmaltes Semipermanentes Gel Polish Primera Quince (10ml)" },
+{ "@type": "MenuItem", "name": "Lámpara UV/LED Flexible para Uñas 12W Cabina Velador" },
+{ "@type": "MenuItem", "name": "Esmaltes y Preparadores Semipermanentes Mely (Top Coat / Ultra Bond / Color Gel Vía Láctea)" },
+{ "@type": "MenuItem", "name": "Cabina Mini Lámpara UV/LED SUN mini Eloíse Portátil para Uñas" },
+{ "@type": "MenuItem", "name": "Cabina Profesional UV/LED SUN L5 Charm Limit Rose Gold con Strass" },
+{ "@type": "MenuItem", "name": "Kit de Extensiones de Pestañas en Racimo DIY Kisseleven" },
+{ "@type": "MenuItem", "name": "Torno Eléctrico Profesional para Uñas Eloíse DM-202 (35000 RPM)" },
+{ "@type": "MenuItem", "name": "Extractor de Polvo Colector Profesional para Uñas Charm Limit" },
+{ "@type": "MenuItem", "name": "Esmaltes Semipermanentes Gel Polish Charm Limit (UV/LED)" },
+{ "@type": "MenuItem", "name": "Torno Eléctrico Inalámbrico Portátil Charm Limit Nail Drill V11" },
+{ "@type": "MenuItem", "name": "Aerógrafo Profesional Portátil Eloíse Airbrush Rose Gold" }
+]
+},
+{
+"@type": "MenuSection",
+"name": "Bolsos, Accesorios, Regalería y Decoración",
+"itemListElement": [
+{ "@type": "MenuItem", "name": "Set Skin Care de Vincha y Muñequeras de Microfibra" },
+{ "@type": "MenuItem", "name": "Vincha de Toalla Acolchada para Skincare Eloíse" },
+{ "@type": "MenuItem", "name": "Aceite Labial con Llavero Lip Honey" },
+{ "@type": "MenuItem", "name": "Mochila Bandolera Cruzada Estampada a Lunares" },
+{ "@type": "MenuItem", "name": "Cartera Bandolera Bicolor Rosa y Blanco con Cadena Dorada" },
+{ "@type": "MenuItem", "name": "Set de Manicura Ai Shi Li Stainless Steel Kit (6 Piezas)" },
+{ "@type": "MenuItem", "name": "Cartera de Mano Negra con Apliques de Tachas y Pañuelo Decorativo" },
+{ "@type": "MenuItem", "name": "Cartera Bandolera Verde con Textura Combinada y Broche Dorado" },
+{ "@type": "MenuItem", "name": "Mochila Bandolera Cruzada Negra Satinada con Cierre Diagonal" },
+{ "@type": "MenuItem", "name": "Cartera Bandolera Estampada Jingpinpj con Aplique de Gatito y Dije" },
+{ "@type": "MenuItem", "name": "Set de Broches para Cabello de Flor Tropical en Varios Colores (6 Piezas)" },
+{ "@type": "MenuItem", "name": "Medias de Algodón para Recién Nacido / Bebé (Talle 7-9 cm)" },
+{ "@type": "MenuItem", "name": "Vaso Plástico Infantil con Sorbete y Diseños Divertidos" },
+{ "@type": "MenuItem", "name": "Vaso Plástico Love Yourself con Sorbete y Tapa Domo" },
+{ "@type": "MenuItem", "name": "Vaso Plástico I Love You To The Moon & Back con Tapa Domo" },
+{ "@type": "MenuItem", "name": "Vaso Térmico Style Recubierto con Perlas Múltiples Colores" },
+{ "@type": "MenuItem", "name": "Set de Espejo de Mano y Peine Infantil Diseño de Gatito" },
+{ "@type": "MenuItem", "name": "Botella Infantil Temática Osito Music con Correa Acolchada" },
+{ "@type": "MenuItem", "name": "Botella Térmica con Estampado Coquette de Moños y Flores" },
+{ "@type": "MenuItem", "name": "Botella Deportiva Reutilizable con Correa Estampada y Banda Antideslizante" },
+{ "@type": "MenuItem", "name": "Botella Infantil Temática Osito Happy Mini-Cool" },
+{ "@type": "MenuItem", "name": "Vasos y Vasos Térmicos Surtidos (Strass, Estampados y Diseños Pastel)" },
+{ "@type": "MenuItem", "name": "Licuadora Portátil Recargable USB con Correa" },
+{ "@type": "MenuItem", "name": "Botellas Térmicas Acero Inoxidable (Diseños Surtidos)" },
+{ "@type": "MenuItem", "name": "Mini Dispenser de Agua Infantil Temático Oso (incluye vaso)" },
+{ "@type": "MenuItem", "name": "Botella Deportiva Reutilizable Tricolor con Correa y Grip Antideslizante" },
+{ "@type": "MenuItem", "name": "Botellas Térmicas Acero Inoxidable (Efecto Mármol Surtidos)" },
+{ "@type": "MenuItem", "name": "Set de Regalo Cremas Corporales Natura Tododia (3 x 100 ml)" },
+{ "@type": "MenuItem", "name": "Mochila Urbana Portanotebook Reforzada Color Negro" },
+{ "@type": "MenuItem", "name": "Mochila Deportiva X-Sports Color Negro" },
+{ "@type": "MenuItem", "name": "Mochila Deportiva X-Sports Color Azul Marino" },
+{ "@type": "MenuItem", "name": "Mochila Inflable Acolchada Urbana Color Azul Francia" },
+{ "@type": "MenuItem", "name": "Mochila Escolar Deportiva Zaphir Race Color Rojo" },
+{ "@type": "MenuItem", "name": "Mochila Escolar Deportiva Zaphir Race Color Azul Metalizado" },
+{ "@type": "MenuItem", "name": "Set de Cucharas y Tenedores Kawaii en Organizador Dorado con Cristales" },
+{ "@type": "MenuItem", "name": "Billetera Metalizada con Tachas Geométricas y Cierre" },
+{ "@type": "MenuItem", "name": "Carterita de Mano Negra con Apliques de Estrás y Hebilla CVR" },
+{ "@type": "MenuItem", "name": "Bandolera Mini Mochila Efecto Cuero Suela con Bolsillo Frontal" },
+{ "@type": "MenuItem", "name": "Billetera Larga Texturada Efecto Mármol Verde con Cierre" },
+{ "@type": "MenuItem", "name": "Carterita de Mano Mini Tote Verde Lima Linvero" },
+{ "@type": "MenuItem", "name": "Cartera Matelassé Suela Bag To Bag con Solapa y Broche" },
+{ "@type": "MenuItem", "name": "Mochila Urbana de Nylon Rosa Viejo con Manijas y Bolsillo Frontal" },
+{ "@type": "MenuItem", "name": "Porta Celular Bandolera Rosa con Cierre y Correa Ajustable" },
+{ "@type": "MenuItem", "name": "Billetera Negra Matelassé Candy Girls con Corazón y Correa de Mano" },
+{ "@type": "MenuItem", "name": "Cartera Hobo de Hombro Beige con Cordones Laterales Anudados" },
+{ "@type": "MenuItem", "name": "Billetera Monedero Matelassé Blanca con Strass y Correa de Mano" }
+]
+},
+{
+"@type": "MenuSection",
+"name": "Peluches, Cotillón y Flores Artificiales Premium",
+"itemListElement": [
+{ "@type": "MenuItem", "name": "Girasoles Premium Lo de Patry (Especial Primavera)" },
+{ "@type": "MenuItem", "name": "Rosas Premium Lo de Patry" },
+{ "@type": "MenuItem", "name": "Peluche de Stitch Disney Suave Textura" },
+{ "@type": "MenuItem", "name": "Oso de Peluche con Corazón Te Amo" },
+{ "@type": "MenuItem", "name": "Lirios Premium Lo de Patry" },
+{ "@type": "MenuItem", "name": "Rosas de Raso Lo de Patry (Hechas a mano)" },
+{ "@type": "MenuItem", "name": "Oso de Peluche Gigante Blanco con Corazón Te Amo y Moño Rojo" },
+{ "@type": "MenuItem", "name": "Vinchas de Flores Lo de Patry" },
+{ "@type": "MenuItem", "name": "Vinchas Rosas de Goma Eva Lo de Patry" },
+{ "@type": "MenuItem", "name": "Vinchas Rosas de Tela Lo de Patry" },
+{ "@type": "MenuItem", "name": "Vinchas Rosas Abiertas Lo de Patry" },
+{ "@type": "MenuItem", "name": "Vinchas Hawaianas Lo de Patry" },
+{ "@type": "MenuItem", "name": "Orquídeas Premium Lo de Patry" },
+{ "@type": "MenuItem", "name": "Ramo de Limpiapipas Lo de Patry (Tulipanes artesanales)" },
+{ "@type": "MenuItem", "name": "Margaritas Premium Lo de Patry" },
+{ "@type": "MenuItem", "name": "Mochila Peluche Infantil Diseño Dinosaurio T-Rex" },
+{ "@type": "MenuItem", "name": "Mochila Peluche Infantil Diseño Oso Panda" },
+{ "@type": "MenuItem", "name": "Peluche Gigante Stitch Durmiendo con Conejito" },
+{ "@type": "MenuItem", "name": "Peluche Gigante Hámster con Palta/Aguacate" },
+{ "@type": "MenuItem", "name": "Silla Sillón Infantil de Peluche Diseño Unicornio" },
+{ "@type": "MenuItem", "name": "Peluche Infantil Ciempiés Multicolor Gigante" },
+{ "@type": "MenuItem", "name": "Peluche Gigante Oso Conejo Color Violeta y Blanco" },
+{ "@type": "MenuItem", "name": "Peluche Gigante Oso con Corazón Te Amo" },
+{ "@type": "MenuItem", "name": "Peluche Stitch Acostado con Muñeco Trapos / Rafa (Scrump)" },
+{ "@type": "MenuItem", "name": "Peluche Ángel (Angel / Stitch Rosa) Sentada" },
+{ "@type": "MenuItem", "name": "Peluches Coleccionables Moochy Pals Diseños Variados" },
+{ "@type": "MenuItem", "name": "Peluche Gigante Oso Lotso Acostado con Frutilla" },
+{ "@type": "MenuItem", "name": "Peluche Stitch Selección Argentina N° 10 con Pelota" },
+{ "@type": "MenuItem", "name": "Set Cake Topper Feliz Cumpleaños y Vincha de Cumpleañera" },
+{ "@type": "MenuItem", "name": "Inflador Manual para Globos y Pelotas" },
+{ "@type": "MenuItem", "name": "Cañón Lanzaconfeti de Papel Aire Comprimido 40 cm Cienfuegos" },
+{ "@type": "MenuItem", "name": "Set de Sorbetes y Pajitas Decorativas Variadas" },
+{ "@type": "MenuItem", "name": "Set de Globos para Fiesta y Globos Largos para Modelar (100 pcs)" },
+{ "@type": "MenuItem", "name": "Kit Decorativo Arco de Globos Feliz Cumpleaños (72 Pcs)" },
+{ "@type": "MenuItem", "name": "Set de Banderines y Globos Metalizados Feliz Cumpleaños" },
+{ "@type": "MenuItem", "name": "Cortinas de Lluvia Metalizadas para Decoración de Fiestas" },
+{ "@type": "MenuItem", "name": "Globo Metalizado Frase Love Cursiva Grande" },
+{ "@type": "MenuItem", "name": "Guías de Flores Lo de Patry" },
+{ "@type": "MenuItem", "name": "Flores para Armar Lo de Patry" },
+{ "@type": "MenuItem", "name": "Césped Artificial Lo de Patry (Paneles verticales)" },
+{ "@type": "MenuItem", "name": "Rosas Variadas Lo de Patry" },
+{ "@type": "MenuItem", "name": "Girasoles y Rosas Lo de Patry" },
+{ "@type": "MenuItem", "name": "Orquídeas Variadas Lo de Patry" }
+]
+}
+]
+}
+},
+{
+"@type": "WebSite",
+"@id": "lodepatry.com.ar",
+"url": "lodepatry.com.ar",
+"name": "Tienda Lo de Patry",
+"description": "Catálogo digital automatizado con Supabase e interfaz interactiva por categorías."
+}
+]
 }
 </script>
+
+
 
 <style>
   /* ============================================================
@@ -324,6 +607,48 @@
   .aviso.err { display: block; background: #fdecec; color: #97243a; }
   .lista-mini { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
   .lista-mini li { font-size: 0.78rem; padding: 6px 12px; border-radius: 999px; background: var(--rosa-pastel); color: var(--tinta-suave); }
+
+  /* ============================================================
+     VENTANA MODAL EMERGENTE (DETALLE DE PRODUCTO)
+     ============================================================ */
+  .modal {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(74, 53, 64, 0.4);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center; padding: 20px;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  }
+  .modal.abierto { opacity: 1; pointer-events: auto; }
+  
+  .modal-caja {
+    width: 100%; max-width: 780px; max-height: 90vh; overflow-y: auto;
+    background: var(--blanco); border-radius: var(--radio-hero);
+    box-shadow: var(--sombra-soft-hover); border: 1px solid rgba(255, 255, 255, 0.8);
+    display: grid; grid-template-columns: 1fr; position: relative;
+  }
+  @media (min-width: 680px) {
+    .modal-caja { grid-template-columns: 1fr 1.1fr; overflow: hidden; }
+  }
+  
+  .modal-cerrar {
+    position: absolute; top: 14px; right: 14px; z-index: 10;
+    width: 36px; height: 36px; border-radius: 50%; border: 0;
+    background: var(--blanco); color: var(--tinta); font-size: 1.2rem;
+    cursor: pointer; display: grid; place-items: center; box-shadow: var(--sombra-soft);
+    transition: transform 0.2s ease;
+  }
+  .modal-cerrar:hover { transform: scale(1.1); color: var(--rosa-fuerte); }
+  
+  .modal-izq { position: relative; background: #fff; min-height: 280px; display: flex; align-items: center; justify-content: center; }
+  .modal-foto { width: 100%; height: 100%; object-fit: contain; max-height: 450px; background: #fafafa; }
+  
+  .modal-der { padding: 30px 24px; display: flex; flex-direction: column; justify-content: center; }
+  .modal-cat { align-self: flex-start; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rosa-fuerte); background: var(--rosa-pastel); padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .modal-titulo { font-family: Georgia, serif; font-size: 1.5rem; line-height: 1.2; color: var(--tinta); margin-bottom: 12px; }
+  .modal-precio { font-size: 1.4rem; font-weight: 700; color: var(--tinta); margin-bottom: 16px; background: linear-gradient(135deg, #fff3f6, #fffcfb); padding: 8px 14px; border-radius: 12px; display: inline-block; align-self: flex-start; border-left: 4px solid var(--rosa-fuerte); }
+  .modal-desc { color: var(--tinta-suave); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.5; text-wrap: pretty; }
+
+
 </style>
 </head>
 
@@ -428,6 +753,34 @@
       </a>
     </div>
   </section>
+
+<!-- Estructura de la Ventana Emergente -->
+<div class="modal" id="modalProducto" role="dialog" aria-hidden="true">
+  <div class="modal-caja">
+    <button class="modal-cerrar" id="btnCerrarModal" aria-label="Cerrar ventana">✕</button>
+    <div class="modal-izq">
+      <img class="modal-foto" id="modalFoto" src="" alt="" />
+    </div>
+       <div class="modal-der">
+      <span class="modal-cat" id="modalCategoria"></span>
+      <h3 class="modal-titulo" id="modalTitulo"></h3>
+      <div class="modal-precio" id="modalPrecio"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      
+      <!-- Texto de Calidad y Servicio Personalizado -->
+      <p style="font-size: 0.82rem; color: var(--tinta-suave); margin-bottom: 16px; font-style: italic; background: #fff8f9; padding: 10px; border-radius: 8px;">
+        ✨ Garantía de calidad Lo de Patry. Si buscás una variante o un producto específico que no ves en stock, ¡escribinos! Te lo conseguimos de inmediato por pedido.
+      </p>
+
+      <a class="btn btn-principal" id="modalBtnWa" href="#" target="_blank" rel="noopener">
+        💬 Preguntar por WhatsApp
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
 
    <footer class="pie" style="padding: 40px 0 120px; text-align: center; color: var(--tinta-suave); font-size: 0.85rem;">
     <!-- Contenedor Fluido de Redes y Canales Directos -->
@@ -619,8 +972,8 @@
   let CATEGORIAS = [];
   let filtroActivo = 'todas';
 
-  /* ============================================================
-     4) RENDER DEL BENTO GRID
+       /* ============================================================
+     4) RENDER DEL BENTO GRID (MODIFICADO PARA MODAL)
      ============================================================ */
   function claseBento(p, i) {
     if (p.ancho) return 'bento-item ancho';
@@ -628,7 +981,7 @@
     return 'bento-item';
   }
 
-  function renderBento() {
+    function renderBento() {
     const lista = filtroActivo === 'todas'
       ? PRODUCTOS
       : PRODUCTOS.filter((p) => (p.categorias?.nombre || p.categoria || '') === filtroActivo);
@@ -645,7 +998,7 @@
       const img = p.imagen_url || './images/IMAGEN_3.jpg';
       const precio = precioARS(p.precio);
       return (
-        '<a class="' + claseBento(p, i) + '" href="' + waLink('Hola! Quiero consultar por: ' + p.nombre) + '" target="_blank" rel="noopener">' +
+        '<article class="' + claseBento(p, i) + '" style="cursor:pointer" data-id="' + p.id + '">' +
           '<img class="foto" src="' + escapar(img) + '" alt="' + escapar(p.nombre) + '" loading="lazy" />' +
           '<div class="velo"></div>' +
           '<span class="bento-chip">' + escapar(cat) + '</span>' +
@@ -654,11 +1007,75 @@
             '<h3>' + escapar(p.nombre) + '</h3>' +
             '<p>' + permitirEtiquetas(p.descripcion || '') + '</p>' +
           '</div>' +
-        '</a>'
+        '</article>'
       );
     }).join('');
   }
 
+
+
+  /* ============================================================
+     LOGICA INTERACTIVA DE LA VENTANA MODAL
+     ============================================================ */
+  const modal = $('#modalProducto');
+
+  // Escuchar el click en cualquier tarjeta del catálogo
+  bento.addEventListener('click', (e) => {
+    const tarjeta = e.target.closest('.bento-item');
+    if (!tarjeta) return;
+
+    const productoId = tarjeta.dataset.id;
+    // Buscamos el objeto del producto completo dentro de nuestra variable global PRODUCTOS
+    const p = PRODUCTOS.find(prod => String(prod.id) === String(productoId));
+    if (!p) return;
+
+    // Inyectamos los datos en la ventana emergente
+    const cat = p.categorias?.nombre || p.categoria || 'Catálogo';
+    const precio = precioARS(p.precio);
+
+    $('#modalFoto').src = p.imagen_url || './images/IMAGEN_3.jpg';
+    $('#modalFoto').alt = p.nombre;
+    $('#modalCategoria').textContent = cat;
+    $('#modalTitulo').textContent = p.nombre;
+    $('#modalDesc').innerHTML = permitirEtiquetas(p.descripcion || 'Sin descripción disponible.');
+    
+    if (precio) {
+      $('#modalPrecio').textContent = precio;
+      $('#modalPrecio').style.display = 'inline-block';
+    } else {
+      $('#modalPrecio').style.display = 'none'; // Si no tiene precio, ocultamos el bloque
+    }
+
+    // Armamos el enlace de WhatsApp personalizado con el nombre exacto de este producto
+    const mensajeWa = '¡Hola Lo de Patry! Vi en tu catálogo web el producto "' + p.nombre + '" y quería consultar si tienen stock disponible hoy.';
+    $('#modalBtnWa').href = waLink(mensajeWa);
+
+    // Mostramos la ventana
+    modal.classList.add('abierto');
+    modal.setAttribute('aria-hidden', 'false');
+  });
+
+  // Función para cerrar la ventana
+  function cerrarModal() {
+    modal.classList.remove('abierto');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  $('#btnCerrarModal').addEventListener('click', cerrarModal);
+  
+  // Cerrar también si hacen click afuera del cuadro blanco
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) cerrarModal();
+  });
+
+  // Cerrar si presionan la tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('abierto')) cerrarModal();
+  });
+
+    /* ============================================================
+     LOGICA DE FILTRADO INTERACTIVO (CON WHATSAPP INTELIGENTE)
+     ============================================================ */
   function renderFiltros() {
     const nombres = [...new Set(PRODUCTOS.map((p) => p.categorias?.nombre || p.categoria).filter(Boolean))];
     filtros.innerHTML = ['todas', ...nombres].map((n) =>
@@ -674,7 +1091,14 @@
     filtroActivo = btn.dataset.cat;
     renderFiltros();
     renderBento();
+
+    // Actualiza los mensajes de los botones flotantes según la categoría activa en pantalla
+    const nombreCat = filtroActivo === 'todas' ? 'el catálogo completo' : 'la categoría ' + filtroActivo;
+    const textoWa = 'Hola Lo de Patry! Estoy revisando ' + nombreCat + ' en la web y quería consultar por stock disponible.';
+    $('#waPrincipal').href = waLink(textoWa);
+    $('#waFlotante').href = waLink(textoWa);
   });
+
 
   /* ============================================================
      5) CARGA ASÍNCRONA DESDE SUPABASE
